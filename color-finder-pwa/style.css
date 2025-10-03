@@ -1,58 +1,138 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #fdf6e3;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f7ede2, #f4dada);
     color: #333;
     padding: 20px;
 }
 
+/* Cabeçalho */
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #ffffff; /* título branco */
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    letter-spacing: 1px;
 }
 
+/* Vídeo da câmera */
 video {
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    width: 300px;
-    height: 225px;
+    border: 4px solid #f0a1a1;
+    border-radius: 20px;
+    width: 340px;
+    height: 255px;
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
 }
 
+video:hover {
+    transform: scale(1.02);
+}
+
+/* Botão */
 button {
     margin: 15px;
-    padding: 10px 20px;
-    background: #e6a1a1;
+    padding: 14px 30px;
+    background: #f07f7f;
     border: none;
-    border-radius: 8px;
+    border-radius: 15px;
     color: white;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 1.1rem;
     cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
+button:hover {
+    background: #e06d6d;
+    transform: translateY(-2px);
+}
+
+/* Resultados */
 #result {
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
+    width: 90%;
+    max-width: 420px;
+    background: rgba(255,255,255,0.9);
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.1);
 }
 
+/* Cor dominante */
 #colorBox {
-    width: 100px;
-    height: 100px;
-    margin: 10px auto;
-    border: 2px solid #333;
-    border-radius: 8px;
+    width: 130px;
+    height: 130px;
+    margin: 20px auto;
+    border-radius: 20px;
+    border: 4px solid #f0a1a1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
 }
 
+#colorBox:hover {
+    transform: scale(1.05);
+}
+
+/* Nome da cor */
+#colorName {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Paleta complementar */
 #palette {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
-    margin-top: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
 }
 
 .palette-color {
-    width: 50px;
-    height: 50px;
-    border: 2px solid #333;
-    border-radius: 5px;
+    width: 65px;
+    height: 65px;
+    border: 4px solid #f0a1a1;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.palette-color:hover {
+    transform: scale(1.1);
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+    video {
+        width: 90%;
+        height: auto;
+    }
+
+    #colorBox {
+        width: 110px;
+        height: 110px;
+    }
+
+    .palette-color {
+        width: 50px;
+        height: 50px;
+    }
 }
