@@ -14,3 +14,5 @@ Um app que usa a câmera para capturar cores e mostrar o nome da cor.
 2. Permita acesso à câmera.  
 3. Clique em uma área da tela para identificar a cor.  
 4. Para instalar: vá no menu do navegador → "Criar Atalho".  
+
+## Link Público: https://joyful-raindrop-8a7012.netlify.app/
